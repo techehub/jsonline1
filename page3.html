@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+   
+</head>
+
+<body>
+    
+    <input type="text" id="mark" >
+    <button onclick="calcGrade()" > Grade</button>
+    <p id="res"></p>
+    <script>
+  
+      function calcGrade(){
+
+       mark =  parseInt( document.getElementById("mark").value);
+        
+       console.log (mark)
+
+       if (mark >= 90 ){
+           grade="A+";
+       }
+       else if (mark >80){
+        grade="A";
+       }
+       else if (mark >70){
+           grade ="B+";
+       }
+       else if (mark >60){
+           grade = "C"
+
+       }
+       else {
+           grade = "D"
+       }
+
+       document.getElementById("res").innerText=grade
+      }
+      
+    </script>
+</body>
+
+</html>

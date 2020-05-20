@@ -1,0 +1,44 @@
+<html>
+<head>
+
+  
+</head>
+
+<body>    
+ 
+  <input type="number" id="n1">
+  <input type="number" id="n2">
+<button onclick="displayTable ()">Table </button>
+
+  <div id="mul">
+
+
+  </div>
+
+
+  <script>
+
+    function displayTable (){
+
+
+    num1=    document.getElementById("n1").value ;
+    num2 =   document.getElementById("n2").value ;
+    i =1
+    str= " <table>";
+
+    while (i <=num2){
+ 
+      str = str + "<tr>";
+      str = str + "<td>"+  num1 +"</td><td>  x  </td><td>"+ i  + "</td><td> = </td> <td>" + (num1*i)  + "</td>";
+      str = str + "</tr>";
+       i = i+1
+     }
+     str = str + "</table>";
+     document.getElementById("mul").innerHTML=str;
+
+    }
+     //alert (sum)
+   </script>
+</body>
+
+</html>
