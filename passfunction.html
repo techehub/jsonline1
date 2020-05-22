@@ -1,0 +1,50 @@
+<html>
+<head>
+</head>
+
+<body>    
+  <script>
+    
+ 
+    function add (a, b){
+            return a+b
+      }
+
+    function subtract(a, b){
+          return a-b
+        }
+
+    function mul (a, b){
+          return a*b
+
+        }
+
+    function calc (a, b, x){
+        return x (a,b)
+    }
+   
+    x=10
+    y=20
+    op = "-"
+
+    if (op=="+"){
+        func= add
+    }
+    else if (op=="-"){
+      func= subtract
+    }
+    else if (op=="*"){
+      func= mul
+    }
+    res =calc (x, y, func);
+
+    alert (res)
+
+  
+
+
+  </script>
+
+</body>
+
+</html>
