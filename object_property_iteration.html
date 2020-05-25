@@ -1,0 +1,57 @@
+<html>
+<head>
+</head>
+
+<body>    
+  <script>
+
+  emp = {
+
+    "id" : "dsff",
+    "name": "jsdgfjgsdf",
+    "salary": 2376824
+
+  }
+
+  function Emp (id, name, salary, hra){
+     // e= {}
+      this.id= id;
+      this.name= name;
+      this.salary=salary;
+      this.hra=hra;
+
+      this.total = function (){
+          return  this. salary +  this.hra
+      }
+     // return e
+  }
+
+  e1=  new  Emp ("111", "aaaaa", 12345, 1000);
+  e2=  new  Emp ("222", "bbbbb", 22222, 1000);
+  e3=  new  Emp ("333", "ccccc", 33333, 1000);
+
+  e3.age= 25;
+
+  /*
+  for (x in e1){
+    console.log (x, e1[x])
+  }
+*/
+
+console.log (e1)
+
+Object.keys(e1).forEach(
+     function(element)  {
+ 	      console.log(element, e1[element])
+    }
+ );
+
+ console.log (e3.hasOwnProperty("age")
+)
+
+  // alert (sum)
+  </script>
+
+</body>
+
+</html>

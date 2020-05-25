@@ -1,0 +1,65 @@
+<html>
+<head>
+</head>
+
+<body>    
+  <script>
+
+  emp = {
+
+    "id" : "dsff",
+    "name": "jsdgfjgsdf",
+    "salary": 2376824
+
+  }
+
+  function Emp (id, name, salary, hra){
+     // e= {}
+      this.id= id;
+      this.name= name;
+      this.salary=salary;
+      this.hra=hra;
+
+      this.total = function (){
+          return  this. salary +  this.hra
+      }
+     // return e
+  }
+
+  e1=  new  Emp ("111", "aaaaa", 12345, 1000);
+  e2=  new  Emp ("222", "bbbbb", 22222, 1000);
+  e3=  new  Emp ("333", "ccccc", 33333, 1000);
+
+  employees = []
+  //employees=[ new Array(2);]
+  employees[0]=e1;
+  employees[1]=e2;
+  employees[2]=e3;
+
+  filetredEmp = employees.filter (
+      function (e){
+           return e.salary>20000 
+      }
+  );
+  console.log(employees)
+  console.log(filetredEmp)
+
+  console.log (e1)
+  console.log (e2)
+
+  console.log (e1.total())
+  console.log (e2.total())
+
+  console.log (e1.id)
+  console.log (e2.id)
+
+
+
+
+ 
+   // alert (sum)
+  </script>
+
+</body>
+
+</html>
