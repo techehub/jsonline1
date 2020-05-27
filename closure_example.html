@@ -1,0 +1,32 @@
+<html>
+<script>
+/*
+var count =0;
+function clicked(){
+ count =count +1;
+ document.getElementById("res").innerHTML= count;
+}
+*/
+var incr = (function (){})()
+var incr= (function () {
+    var count =0;
+    function  increment(){
+        count =count +1;
+        document.getElementById("res").innerHTML= count;
+        console.log ("Clicked !!!!")
+    }
+    return increment;
+})()
+
+function sometask(){
+    count = 0;
+}
+
+</script>
+<body>
+<button  onclick="incr()">Click Me</button>
+<button onclick="sometask()" >  Do Other task </button>
+<div id="res"></div>
+</body>
+
+</html>
