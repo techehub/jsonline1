@@ -4,7 +4,7 @@
  a= 10
  b = 20
 
- function add (){
+ function add (a,b){
      return a+b;
  }
 

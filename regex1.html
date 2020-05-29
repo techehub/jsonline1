@@ -1,0 +1,29 @@
+<body>
+    <form action="action">
+        <div>
+        <textarea name="searchta" id="searchta" cols="100" rows="10"></textarea>
+        </div>
+        <div>
+        <input type="text" name="searchtb" id="searchtb">
+        </div>
+        <input type="button" value="search" onclick="clicked()">
+        <div id="searchdiv">
+                sf
+        </div>
+    </form>
+    <script>
+        function clicked(){
+           var taObj = document.getElementById('searchta');
+           var divObj = document.getElementById('searchdiv');
+           var tbObj = document.getElementById('searchtb');
+           divObj.innerHTML= highlight (taObj.value,  tbObj.value);
+        }   
+
+        function highlight(str, word){
+            console.log('inside highlight: searchstr:'+ str+", word:"+word);
+            var re = new RegExp(word,'g')    
+            var result = str.replace(re, '<strong style="color:red">'+word+'</strong>')
+            return result;
+        }
+    </script>
+</body>
