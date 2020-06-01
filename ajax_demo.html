@@ -4,43 +4,32 @@
 
     <script>
 
-
         function getFollowers(){
             name= document.getElementById("uname").value
-
             url ='https://api.github.com/users/'+name.trim()+'/followers';
             req = new XMLHttpRequest();
             req.open("GET", url);
             req.onreadystatechange = function (){
-               
                     if (this.readyState==4 && this.status==200){
                        // console.log (this.responseText)
                        display(this.responseText)
-                    }
-                       
+                    }    
+                                  
             }
             req.send()
         }
 
         function display (txt){
-
             var vals= JSON.parse(txt)
-            
             str = "<table border='1'>"
-           
             for (x of vals){
                 str = str+ "<tr>"
                     str = str+ "<td>" +  x ['id']+ "</td>";
                     str = str+ "<td>" +  x ['login']+ "</td>";
                 str = str + "</tr>"
-            } 
-          
+            }          
             str =str + "</table>"
-
             document.getElementById('res').innerHTML=str;
-
-         
-
         }
 
     </script>
