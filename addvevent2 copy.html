@@ -1,0 +1,39 @@
+<html>
+
+
+<head>
+    <style>
+        
+        .content {
+            color : red
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <div id="header" class ="content">
+        <div id="main" class ="content">
+            <div id="footer" class ="content">
+                <h1> Footer </h1>
+            </div>
+        </div>
+    </div>
+
+      
+
+    <script>
+
+
+        var elems = document.querySelectorAll("div.content");
+        for(let elem of elems) {
+            elem.addEventListener("click", function (){
+                console.log ("Clicked !!")               
+            }, false);
+        }
+       
+    </script>
+</body>
+</html>

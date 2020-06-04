@@ -1,0 +1,50 @@
+<html>
+
+
+<head>
+    <style>
+        
+        .content {
+            color : red
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <div id="header" class ="content">
+        <h1> Header </h1>
+    </div>
+
+    <div id="main" class ="content">
+        <h1> Main </h1>
+    </div>
+
+    <div id="footer" class ="content">
+        <h1> Footer </h1>
+    </div>
+
+    <script>
+
+        /*
+        document.querySelectorAll("div.content").forEach(e =>{
+            console.log (e)
+            e.addEventListener("mouseover", function (x){
+                console.log (x)
+            })
+        })
+        */
+
+        var elems = document.querySelectorAll("div.content");
+        for(let elem of elems) {
+            elem.addEventListener("mouseover", function (){
+                //console.log (this)
+                this.innerHTML="QQQQQ";
+            }, true);
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+
+
+<head>
+
+
+</head>
+<body>
+
+    <button id = "abc" > Click Me</button>
+    <input type="text" id="name"/>
+
+
+    <button id = "remove" onclick="removeEvents()" >  RemoveEvent</button>
+
+    <div id="header">
+
+        <h1> Header </h1>
+
+    </div>
+
+    <script>
+
+
+        function test (e){
+                console.log (e)
+        }
+
+
+        var ctrl = document.getElementById("abc");
+        ctrl.addEventListener("click", test);
+
+        document.getElementById("name").addEventListener("keypress", function (e) {
+            console.log (e.key)
+        }
+
+        )
+
+        document.getElementById("header").addEventListener("mouseover", function (e) {
+            console.log ("Mouse over")
+            document.getElementById("header").style.color ="red"
+        }
+        )
+
+        document.getElementById("header").addEventListener("mouseout", function (e) {
+            console.log ("Mouse over")
+            document.getElementById("header").style.color ="blue"
+        }
+        )
+
+        function removeEvents(){
+            document.getElementById("abc").removeEventListener("click", test)
+        }
+
+
+
+    </script>
+</body>
+</html>
