@@ -1,0 +1,72 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+
+    <div id="res">
+        </div>
+
+        <script>
+
+            class Person {
+
+                constructor (name, age){
+                    this.name= name;
+                    this.age = age;
+                }
+
+                printName (){
+                    alert ("pppp")
+                }
+
+            }
+
+            class Student extends Person{
+            constructor(id, name, age, mark1, mark2, mark3){
+                super(name, age)
+                this.rollNo = id;
+                this.mark1= mark1;
+                this.mark2= mark2;
+                this.mark3= mark3;
+            }
+            
+            //instance function
+            total (){
+                return this.mark1+ this.mark2 + this.mark3;
+            }
+            avg (){
+                 return this.total()/3
+             }
+
+            printName (){
+                    alert ("cccc")
+            }
+
+            
+             static average (m1, m2, m3){
+                return (m1 + m2 + m3)/3
+             }
+             
+            }
+        
+            
+            s1= new Student("111", "kumar", 21, 11,22,33);
+            s2= new Student("222", "Seetha",23, 44,22,33);
+            s3= new Student("333", "Tom", 25, 32,22,33);
+
+            s1.printName();
+            
+            //document.getElementById("res").innerText= s3.avg()
+            
+            document.getElementById("res").innerText= Student.average (44, 55, 77)
+            
+            
+            
+            </script>
+
+</body>
+
+</html>

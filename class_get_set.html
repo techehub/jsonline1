@@ -1,0 +1,60 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+
+    <div id="res">
+        </div>
+
+        <script>
+
+            class Student {
+            constructor(id, name, mark1, mark2, mark3){
+                this.rollNo = id;
+                this.name= name;
+                this.mark1= mark1;
+                this.mark2= mark2;
+                this.mark3= mark3;
+            }
+            
+            //instance function
+            total (){
+                return this.mark1+ this.mark2 + this.mark3;
+            }
+            avg (){
+                 return this.total()/3
+             }
+
+             get studentName (){
+                 return this.name.toLowerCase()
+             }
+             
+             set studentName( name){
+                 this.name=  name.toUpperCase()
+             }
+             
+            }
+        
+            
+            s1= new Student("111", "kumar", 11,22,33);
+            s2= new Student("222", "Seetha", 44,22,33);
+            s3= new Student("333", "Tom", 32,22,33);
+
+           
+            s1.studentName = "Anand"
+            //v= s1.name
+            
+            document.getElementById("res").innerText= s1.studentName
+            
+           
+            
+            
+            
+            </script>
+
+</body>
+
+</html>

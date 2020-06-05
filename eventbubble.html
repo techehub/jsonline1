@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+    <style>
+
+        .content {
+            background-color: red;
+        }
+
+        .items {
+            background-color: blue;
+           
+        }
+
+        .tasks {
+            background-color:powderblue;
+            color: yellow;
+        }
+
+        .done  {
+
+            text-decoration:  line-through;
+        }
+
+        .green {
+            color: green;
+        }
+        
+     </style>   
+
+</head>
+
+<body>
+
+    <div class="content">
+        To Do Items
+        <ul class="items">
+                <li class="tasks"> Task1</li>
+                <li class="tasks"> Task2</li>
+                <li class="tasks"> Task3</li>
+                <li class="tasks"> Task4</li>
+        </ul>
+    </div>
+
+    <script>
+
+    document.querySelector("div.content").addEventListener("click", function (){
+        alert ("Div clicked")
+    }, false)
+
+
+    document.querySelector("ul.items").addEventListener("click", function (e){
+        alert ("List  clicked")
+        e.target.classList.toggle("done")   
+
+    }, false)
+
+/*
+    document.querySelectorAll("li.tasks").forEach(e => e.addEventListener("click", function (e){
+        alert ("Item  clicked")
+        //console.log (e)
+        //console.log (e.target.classList);
+        //e.target.classList.toggle("done")
+        //e.target.classList.add("green")
+
+    }, false ) ) 
+*/
+    </script>     
+    </body>
+
+</html>
